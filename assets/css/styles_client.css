@@ -1,0 +1,134 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #eff1ec;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Estilos de la sección de relojes */
+.relojes-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    width: calc(100% - 100px);
+    margin-left: 300px;
+    background-color: #eff1ec;
+}
+
+/* Estilo de cada reloj individual */
+.reloj-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.reloj-item h3 {
+    font-size: 20px;
+    color: #34495e;
+}
+
+.reloj-item p {
+    color: #2c3e50;
+}
+
+.reloj-item img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.reloj-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos del botón de WhatsApp */
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebc57;
+}
+
+/* Estilos de la ventana de filtros */
+.filter-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.filter-sidebar h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-sidebar form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-sidebar label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.filter-sidebar select,
+.filter-sidebar input[type="number"],
+.filter-sidebar input[type="checkbox"],
+.filter-sidebar button {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.filter-sidebar button {
+    background-color: #2a4ca2;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.filter-sidebar button:hover {
+    background-color: #163ba0;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .relojes-list {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .filter-sidebar {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+    }
+}

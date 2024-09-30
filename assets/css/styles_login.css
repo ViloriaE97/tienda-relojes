@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.login-container {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 350px;
+    position: relative;
+}
+
+.login-box h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+button {
+    background-color: #e74c3c;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.note {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.note span {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* Figuras decorativas */
+.background-decorations .circle1,
+.background-decorations .circle2,
+.background-decorations .triangle,
+.background-decorations .square {
+    position: absolute;
+    z-index: 0;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.circle1 {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    right: -50px;
+}
+
+.circle2 {
+    width: 200px;
+    height: 200px;
+    bottom: -80px;
+    left: -80px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 120px solid rgba(255, 255, 255, 0.15);
+    top: 20%;
+    left: 70%;
+    transform: rotate(45deg);
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    top: 80%;
+    left: 80%;
+    transform: rotate(45deg);
+}
+
+/* Animaciones */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
